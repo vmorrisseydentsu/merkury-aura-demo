@@ -115,7 +115,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .jem-header-sub{font-size:13px;color:rgba(255,255,255,.65);}
 .jem-body{padding:24px 32px;}
 .jem-product{display:flex;gap:16px;padding:16px;background:#f7f4f0;border-radius:8px;margin-bottom:20px;}
-.jem-product-img{width:80px;height:80px;border-radius:6px;background:linear-gradient(135deg,#8a9e7a,#6b7c4a);flex-shrink:0;}
+.jem-product-img{width:80px;height:80px;border-radius:6px;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.3.webp') center/cover no-repeat;flex-shrink:0;}
 .jem-product-name{font-size:14px;font-weight:700;color:#0d0d0d;margin-bottom:3px;}
 .jem-product-detail{font-size:12px;color:#888;margin-bottom:6px;}
 .jem-product-price{font-size:16px;font-weight:700;color:#0d0d0d;}
@@ -1038,7 +1038,6 @@ footer{background:#fff;padding:40px 0 0;}
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')">AURA</div>
     <div class="nav-links">
-      <span class="nav-link" onclick="toggleMegaNav()" id="nav-new-link">New</span>
       <span class="nav-link" onclick="showPage('bottoms')">Bottoms</span>
       <span class="nav-link" onclick="showPage('jackets')">Jackets</span>
       <span class="nav-link" onclick="showPage('circle')">Circle Rewards</span>
@@ -1305,15 +1304,7 @@ footer{background:#fff;padding:40px 0 0;}
     <p class="cat-page-sub" id="jackets-page-sub">Layer up for whatever the day brings.</p>
     <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Style</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
   </div></div>
-  <!-- Jennifer personalisation bar -->
-  <div id="jackets-pers-bar" style="display:none;background:linear-gradient(135deg,#4a5c35,#3a4a28);padding:14px 48px;display:flex;align-items:center;gap:12px;">
-    <span style="font-size:16px;">✨</span>
-    <div style="font-size:13px;color:rgba(255,255,255,.9);"><strong style="color:#fff;">Personalised for Jennifer</strong> — Jackets is your top affinity category. Merkury surfaced this based on your purchase history and lapsed re-engagement signal.</div>
-    <div style="margin-left:auto;display:flex;gap:6px;flex-shrink:0;">
-      <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:rgba(255,255,255,.8);">category_affinity_1: Jackets</span>
-      <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:2px 10px;font-size:10px;font-weight:700;color:rgba(255,255,255,.8);">confidence: 1</span>
-    </div>
-  </div>
+
   <div class="cat-page-grid-wrap"><div class="w">
     <div class="cat-page-result-count" id="jackets-result-count">58 Results</div>
     <div class="product-grid">
@@ -1342,8 +1333,8 @@ footer{background:#fff;padding:40px 0 0;}
       <div>
         <div class="pdp-eyebrow" id="pdp-eyebrow">Bottoms</div>
         <h1 class="pdp-title" id="pdp-title">High Rise Flare Performance Pant</h1>
-        <div class="pdp-price">$98</div>
-        <div class="pdp-member-price">Circle Member Price $88</div>
+        <div class="pdp-price" id="pdp-price-val">$98</div>
+        <div class="pdp-member-price" id="pdp-member-price-val">Circle Member Price $88</div>
         <div class="pdp-rating"><span class="pdp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (312 Reviews)</span></div>
         <div class="pdp-color-label">Color: Midnight Black</div>
         <div class="pdp-swatches"><div class="pdp-swatch active" style="background:#1a1a1a"></div><div class="pdp-swatch" style="background:#2a5a8a"></div><div class="pdp-swatch" style="background:#8a2a2a"></div></div>
@@ -1380,7 +1371,7 @@ footer{background:#fff;padding:40px 0 0;}
       <div id="cart-page-filled-state" style="display:none;">
         <div class="cart-page-title">My Bag (1 item)</div>
         <div class="cart-page-item">
-          <div class="cart-page-item-img" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div>
+          <div class="cart-page-item-img" id="cart-pg-item-img" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div>
           <div><div class="cart-page-item-name" id="cart-pg-name">High Rise Flare Performance Pant</div><div class="cart-page-item-detail" id="cart-pg-detail">Size: S · Color: Midnight Black · Qty: 1</div><div class="cart-page-item-price" id="cart-pg-price">$98.00</div><div class="cart-page-item-member" id="cart-pg-member">Circle Member Price $88.00</div><span class="cart-page-item-remove" onclick="emptyCart()">Remove</span></div>
           <div style="font-size:14px;font-weight:600;" id="cart-pg-total">$98.00</div>
         </div>
@@ -1413,9 +1404,9 @@ var PAYLOADS={
 };
 
 var CONTENT={
-  def:{promoBar:'15% Off Your New Favorites &#8212; <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',heroBg:'#fff',heroTextDark:true,homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up and get 15% off your next order.',encoreTitle:'Extra 15% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
+  def:{promoBar:'15% Off Your New Favorites &#8212; <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',heroBg:'#fff',heroTextDark:true,homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up and get 15% off your next order.',encoreTitle:'Extra 15% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpPrice:'$98',pdpMemberPrice:'Circle Member Price $88',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
   maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
-  jennifer:{promoBar:'Jennifer, your 20% off jackets is waiting &#8212; <a onclick="showPage(\'jackets\')" style="color:#fff;text-decoration:underline;">Shop Jackets</a>',heroEyebrow:'',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroBg:'#faf6f0',heroTextDark:true,homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'Your rewards are waiting',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
+  jennifer:{promoBar:'Jennifer, your 20% off jackets is waiting &#8212; <a onclick="showPage(\'jackets\')" style="color:#fff;text-decoration:underline;">Shop Jackets</a>',heroEyebrow:'',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroBg:'#faf6f0',heroTextDark:true,homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'Your rewards are waiting',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpPrice:'$148',pdpMemberPrice:'With your discount: $118.40',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
   danielle:{promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
 };
 
@@ -1460,7 +1451,7 @@ var CONF_EXPLAIN={
 var CART_CONFIG={
   def:{itemName:'High Rise Flare Performance Pant',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$98.00',itemMember:'Circle Member Price $88.00',itemGrad:'grad-1',pointsText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',recsTitle:"Styles We Think You'll Love",subtotal:'$98.00',recs:[{name:'Performance Tight 7/8',price:'$98',g:'grad-2'},{name:'Barrel Leg Pant',price:'$118',g:'grad-3'},{name:'Studio Jogger',price:'$79',g:'grad-5'}]},
   maya:{itemName:'High Rise Performance Tight 7/8',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$109.00',itemMember:'Circle All-Access Price: $98.10',itemGrad:'grad-1',pointsText:'<strong>Circle All-Access:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{name:'Longline Sports Bra',price:'$59',g:'grad-6'},{name:'Everyday Legging',price:'$74',g:'grad-2'},{name:'Studio Wrap Top',price:'$89',g:'grad-3'}]},
-  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'With your discount: $133.20',itemGrad:'grad-7',pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
+  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'With your discount: $133.20',itemGrad:'grad-7',itemBg:"url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.3.webp') center/cover no-repeat",pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
   danielle:{itemName:'Structured Barrel Leg Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemGrad:'grad-3',pointsText:'<strong>Join Aura Circle free</strong> - earn points starting with this order.',subtotal:'$118.00',recs:[{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Studio Tank',price:'$49',g:'grad-4'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'}]}
 };
 
@@ -1567,6 +1558,8 @@ function applyContent(key){
   }
   set('cat-page-title',v.catPageTitle);set('cat-page-name',v.catPageTitle);set('cat-page-sub',v.catPageSub);set('cat-result-count',v.catResultCount);
   set('pdp-title',v.pdpTitle);set('pdp-desc',v.pdpDesc);set('pdp-recs-title',v.pdpRecsTitle);
+  var pdpPriceEl=document.getElementById('pdp-price-val');if(pdpPriceEl&&v.pdpPrice)pdpPriceEl.textContent=v.pdpPrice;
+  var pdpMemEl=document.getElementById('pdp-member-price-val');if(pdpMemEl&&v.pdpMemberPrice)pdpMemEl.textContent=v.pdpMemberPrice;
   var atc=document.getElementById('pdp-atc-btn');if(atc)atc.textContent=v.pdpAtcBtn;
   set('pdp-eyebrow',v.pdpEyebrow);
   var pbc=document.getElementById('pdp-breadcrumb-cat');if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
@@ -1642,6 +1635,8 @@ function populateCartPage(){
     set('cart-pg-price',cfg.itemPrice);set('cart-pg-member',cfg.itemMember);
     set('cart-pg-total',cfg.subtotal);set('cart-pg-subtotal',cfg.subtotal);set('cart-pg-est-total',cfg.subtotal);
     set('cart-pg-recs-title',cfg.recsTitle);
+    var cartImg=document.getElementById('cart-pg-item-img');
+    if(cartImg&&cfg.itemBg)cartImg.style.background=cfg.itemBg;
     var rg=document.getElementById('cart-pg-recs-grid');
     if(rg)rg.innerHTML=cfg.recs.map(function(r){return '<div class="cart-rec-tile" onclick="showPage(\'pdp\')">'+'<div class="cart-rec-tile-img '+r.g+'"></div>'+'<div class="cart-rec-tile-name">'+r.name+'</div>'+'<div class="cart-rec-tile-price">'+r.price+'</div></div>';}).join('');
   }else{if(empty)empty.style.display='block';if(filled)filled.style.display='none';set('cart-pg-subtotal','$0.00');set('cart-pg-est-total','$0.00');}
