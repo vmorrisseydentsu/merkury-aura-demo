@@ -1298,8 +1298,8 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="cat-page-result-count">64 Results</div>
     <div class="product-grid">
       <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">High Rise Flare Performance Pant</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
-      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$89</div><div class="pt-member-price">Circle Price $80</div></div>
-      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$89</div><div class="pt-member-price">Circle Price $80</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
       <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"><div class="pt-badge pt-badge-sale">Sale</div></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
     </div>
   </div></div>
@@ -1358,7 +1358,7 @@ footer{background:#fff;padding:40px 0 0;}
     </div>
     <div class="pdp-recs"><h2 id="pdp-recs-title">YOU MAY ALSO LIKE</h2>
       <div class="pdp-recs-grid">
-        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+        <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div><div class="pt-name">Performance Tight 7/8</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
         <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/matching.sets.webp') center/cover no-repeat;"></div><div class="pt-name">Studio Jogger</div><div class="pt-price">$79</div><div class="pt-member-price">Circle Price $71</div></div>
         <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.girl.webp') center/cover no-repeat;"></div><div class="pt-name">Barrel Leg Pant</div><div class="pt-price">$118</div><div class="pt-member-price">Circle Price $106</div></div>
         <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div><div class="pt-name">Wide Leg Studio Pant</div><div class="pt-price">$108</div><div class="pt-member-price">Circle Price $97</div></div>
@@ -1574,11 +1574,8 @@ function applyContent(key){
   renderProductGrid(key);applyLoyalty(key);
   // Circle page personalisation
   // Jackets page personalisation bar
-  var jacketsBar=document.getElementById('jackets-pers-bar');
-  var jacketsSub=document.getElementById('jackets-page-sub');
+  // jackets personalisation bar removed
   var jacketsCount=document.getElementById('jackets-result-count');
-  if(jacketsBar)jacketsBar.style.display=key==='jennifer'?'flex':'none';
-  if(jacketsSub)jacketsSub.textContent=key==='jennifer'?'Your top affinity category — new styles just landed.':'Layer up for whatever the day brings.';
   if(jacketsCount)jacketsCount.textContent=key==='jennifer'?'58 Results — sorted by your affinity':'58 Results';
 
   var memberBar=document.getElementById('circle-member-bar');
@@ -1953,8 +1950,8 @@ function showPush(title,msg){var w=document.getElementById('push-notif-wrap');va
 function dismissPush(){var w=document.getElementById('push-notif-wrap');if(w)w.classList.remove('visible');}
 
 var megaNavOpen=false;
-function toggleMegaNav(){megaNavOpen=!megaNavOpen;document.getElementById('mega-nav-new').classList.toggle('open',megaNavOpen);document.getElementById('nav-new-link').classList.toggle('active',megaNavOpen);}
-function closeMegaNav(){megaNavOpen=false;var m=document.getElementById('mega-nav-new');if(m)m.classList.remove('open');var l=document.getElementById('nav-new-link');if(l)l.classList.remove('active');}
+function toggleMegaNav(){/* mega nav removed */}
+function closeMegaNav(){megaNavOpen=false;}
 document.addEventListener('click',function(e){if(!e.target.closest('.main-nav')&&!e.target.closest('#mega-nav-new'))closeMegaNav();});
 
 function setCmTone(btn,tone){document.querySelectorAll('.cm-tone-pill').forEach(function(p){p.classList.remove('active');});btn.classList.add('active');cmActiveTone=tone;var v=CM_COPY[tone]||CM_COPY['urgent'];var t0=document.getElementById('cv-text-0');if(t0)t0.textContent=v[0];var t1=document.getElementById('cv-text-1');if(t1)t1.textContent=v[1];updatePhonePreview();}
@@ -1996,7 +1993,7 @@ function applyPersona(key){
   chatHistory=[];
   var msgs=document.getElementById('chat-messages');if(msgs)msgs.innerHTML='';
   updateChatContext();
-  var reopenBtn=document.getElementById('pers-reopen-btn');if(reopenBtn)reopenBtn.classList.remove('visible');
+  // pers-reopen-btn removed
   setTimeout(function(){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');},300);
   if(key!=='def'){
     populateModal(key);
