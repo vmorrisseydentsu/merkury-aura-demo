@@ -164,7 +164,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
 .hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
-.hero-eyebrow{font-family:var(--font-serif);font-size:15px;font-weight:400;font-style:italic;color:rgba(255,255,255,.8);margin-bottom:12px;display:none;letter-spacing:.5px;}
+.hero-eyebrow{font-family:var(--font-serif);font-size:15px;font-weight:400;font-style:italic;color:var(--text3);margin-bottom:12px;display:none;letter-spacing:.5px;}
 .hero-h1-light{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:400;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
 .hero-h1-bold{font-family:var(--font-serif);font-size:clamp(32px,3.2vw,50px);font-weight:700;color:#0d0d0d;letter-spacing:3px;text-transform:uppercase;line-height:1.1;display:block;}
 .hero-sub{font-size:14px;color:var(--text2);line-height:1.7;margin:16px 0 28px;max-width:260px;}
@@ -435,9 +435,9 @@ footer{background:#fff;padding:40px 0 0;}
 .signup-legal a{color:var(--text3);text-decoration:underline;}
 
 /* PERSONALIZATION MODAL */
-#pers-modal-overlay{display:none;position:fixed;top:80px;right:24px;z-index:8000;align-items:flex-start;justify-content:flex-end;padding:0;}
+#pers-modal-overlay{display:none;position:fixed;top:120px;right:24px;z-index:8000;align-items:flex-start;justify-content:flex-end;padding:0;}
 #pers-modal-overlay.open{display:flex;}
-.pers-modal{background:#fff;border-radius:8px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.22);animation:modalIn .22s ease;position:relative;max-height:80vh;overflow-y:auto;}
+.pers-modal{background:#fff;border-radius:8px;width:100%;max-width:420px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.18);animation:modalIn .22s ease;position:relative;max-height:72vh;overflow-y:auto;}
 .pers-modal-close{position:absolute;top:14px;right:16px;font-size:24px;color:rgba(255,255,255,.8);cursor:pointer;background:none;border:none;line-height:1;z-index:2;font-family:var(--font);}
 .pers-modal-data-link{position:absolute;bottom:14px;right:16px;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;font-family:var(--font);transition:color .15s;z-index:2;}
 .pers-modal-data-link:hover{color:#fff;}
@@ -1057,7 +1057,7 @@ footer{background:#fff;padding:40px 0 0;}
       <!-- Integration tab — visible when Jennifer active -->
       <div id="ps-integration-tab">
         <div class="ps-int-tab-header">&#9889; Jennifer — Activations</div>
-        <button class="ps-int-tab-btn" style="background:rgba(42,58,90,.3);color:#a8b8ff;" onclick="openModal()"><span class="ps-int-icon">🪪</span>Merkury Identity Resolved</button>
+        <button class="ps-int-tab-btn" style="background:rgba(194,122,90,.15);color:#e8a888;" onclick="document.getElementById('ps-integration-tab').classList.remove('open');openModal();"><span class="ps-int-icon">🪪</span>Merkury Identity Resolved</button>
         <button class="ps-int-tab-btn sms" onclick="openCampaignModal()"><span class="ps-int-icon">📱</span>SMS Re-engagement Campaign</button>
         <button class="ps-int-tab-btn email" onclick="openJenniferEmailModal()"><span class="ps-int-icon">📧</span>Win-back Email Preview</button>
         <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — Save 20% Off</button>
@@ -1155,7 +1155,7 @@ footer{background:#fff;padding:40px 0 0;}
   </div>
 
   <!-- Jennifer's active tier banner — only visible when Jennifer is active -->
-  <div id="circle-member-bar" style="display:none;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,#2a3a5a,#151f35);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div id="circle-member-bar" style="display:none;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,#4a5c35,#3a4a28);padding:20px 48px;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
     <div style="display:flex;align-items:center;gap:16px;">
       <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;">&#128105;</div>
       <div>
@@ -1274,7 +1274,7 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="cat-page-filters"><div class="filter-chip active">Filter and Sort</div><div class="filter-chip">Style</div><div class="filter-chip">Color</div><div class="filter-chip">Size</div><div class="filter-chip">Activity</div></div>
   </div></div>
   <!-- Jennifer personalisation bar -->
-  <div id="jackets-pers-bar" style="display:none;background:linear-gradient(135deg,#1e2a3a,#2a3a5a);padding:14px 48px;display:flex;align-items:center;gap:12px;">
+  <div id="jackets-pers-bar" style="display:none;background:linear-gradient(135deg,#4a5c35,#3a4a28);padding:14px 48px;display:flex;align-items:center;gap:12px;">
     <span style="font-size:16px;">✨</span>
     <div style="font-size:13px;color:rgba(255,255,255,.9);"><strong style="color:#fff;">Personalised for Jennifer</strong> — Jackets is your top affinity category. Merkury surfaced this based on your purchase history and lapsed re-engagement signal.</div>
     <div style="margin-left:auto;display:flex;gap:6px;flex-shrink:0;">
@@ -1383,13 +1383,13 @@ var PAYLOADS={
 var CONTENT={
   def:{promoBar:'15% Off Your New Favorites &#8212; <a onclick="showPage(\'category\')">Shop Women</a>',heroEyebrow:'',heroH1Light:'MOVE IN WHAT',heroH1Bold:'MOVES YOU',heroSub:'Discover our latest collection — designed for every move you make.',heroCta1:'Shop Now',heroBg:'#fff',heroTextDark:true,homeCatTitle:'SHOP THE COLLECTION',catLabels:['Matching Sets','Flow State','Studio Fits','On the Mat'],catSubs:['Effortlessly coordinated','Built for your practice','From class to everywhere','Your go-to studio layer'],pbEyebrow:'New Collection',pbH2:'Your Mat, Your Practice',pbP:'Built for every pose, every flow. Studio-ready styles designed to move with you.',pbCta:'Shop Now',lifeTitle:'MADE FOR THE MAT',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Top-rated by our community',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle free',loyaltySub:'Sign up and get 15% off your next order.',encoreTitle:'Extra 15% off your first purchase',catPageTitle:'New Arrivals',catPageSub:'The freshest styles, just landed.',catResultCount:'218 Results',pdpTitle:'High Rise Flare Performance Pant',pdpDesc:'From the studio to the street, this pant delivers a flattering silhouette with the performance you expect from Aura.',pdpRecsTitle:'YOU MAY ALSO LIKE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Bottoms',pdpBreadcrumbCat:'Bottoms'},
   maya:{promoBar:'Welcome back Maya - Circle All-Access exclusive: extra 15% off <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'Back For More',heroH1Light:'BACK FOR',heroH1Bold:'MORE. AS ALWAYS.',heroSub:'Your next obsession just landed. New leggings and bras made for how you move.',heroCta1:'Shop Leggings',homeCatTitle:'YOUR FAVORITES UPDATED',catLabels:['Matching Sets','Flow State','New Leggings','On the Mat'],catSubs:['Fresh drops','Your go-to','Just landed','Studio essentials'],pbEyebrow:'Circle All-Access',pbH2:'Your exclusive early access',pbP:'New drops hit your feed first. As a Circle member you get first pick.',pbCta:'Shop My Picks',lifeTitle:'BUILT FOR YOUR PRACTICE',lifeMainLabel:'YOGA ESSENTIALS',lifeMainSub:'Curated for you',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Hi Maya, your points are waiting',loyaltySub:'You have 240 Aura Circle points. Use them on your next order.',encoreTitle:'Circle All-Access: extra 15% off today',catPageTitle:'Leggings',catPageSub:'Your forever favorites.',catResultCount:'89 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'The legging our most loyal members keep coming back to.',pdpRecsTitle:'BECAUSE YOU LOVED THESE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Leggings',pdpBreadcrumbCat:'Leggings'},
-  jennifer:{promoBar:'Welcome back &#8212; 20% off new arrivals just for you <a onclick="showPage(\'category\')">Shop Now</a>',heroEyebrow:'',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroBg:'#1e2a3a',heroTextDark:false,homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'Your rewards are waiting',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
+  jennifer:{promoBar:'Jennifer, your 20% off jackets is waiting &#8212; <a onclick="showPage(\'jackets\')" style="color:#fff;text-decoration:underline;">Shop Jackets</a>',heroEyebrow:'',heroH1Light:'FROM THE MAT',heroH1Bold:'TO THE MOMENT.',heroSub:'Versatile pieces that work at school pickup, the gym, and everywhere in between.',heroCta1:'Shop Versatile Styles',heroBg:'#faf6f0',heroTextDark:true,homeCatTitle:'FROM ERRANDS TO EVERYTHING',catLabels:['Studio Fits','Matching Sets','Flow State','On the Mat'],catSubs:['Polished and easy','Layer up','All-day comfort','The classic'],pbEyebrow:'New In',pbH2:'The styles that do it all.',pbP:'Versatile, performance-ready pieces designed for wherever the day takes you.',pbCta:'Shop Now',lifeTitle:'WEAR IT EVERYWHERE',lifeMainLabel:'EVERYDAY ESSENTIALS',lifeMainSub:'From school run to yoga class',lifeCards:['STUDIO FITS','ON THE MAT','FLOW STATE','MINDFUL MOVEMENT'],loyaltyTitle:'Your rewards are waiting',loyaltySub:'You are just a few points away from your next reward.',encoreTitle:'Welcome back bonus: 20% off your next purchase',catPageTitle:'Jackets',catPageSub:'Layer up for whatever the day brings.',catResultCount:'58 Results',pdpTitle:'Performance Softshell Jacket',pdpDesc:'Built for wherever the day takes you.',pdpRecsTitle:'COMPLETE THE LOOK',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Jackets',pdpBreadcrumbCat:'Jackets'},
   danielle:{promoBar:'New in swim — styles made for your next adventure <a onclick="showPage(\'category\')">Shop Swim</a>',heroEyebrow:'Just For You',heroH1Light:'YOUR PRACTICE.',heroH1Bold:'YOUR NEXT MOVE.',heroSub:'You love the studio. Now dive into our swim collection — built with the same performance you trust.',heroCta1:'Explore Swim',homeCatTitle:'MADE FOR HOW YOU MOVE',catLabels:['Flow State','Matching Sets','Studio Fits','On the Mat'],catSubs:['Your yoga go-to','New for you','Performance ready','Dive in'],pbEyebrow:'New Arrival',pbH2:'Find Your Flow',pbP:'New studio styles made for every practice. Discover what moves you.',pbCta:'Shop Now',lifeTitle:'BUILT FOR YOUR ACTIVE LIFE',lifeMainLabel:'STUDIO FAVORITES',lifeMainSub:'Your most-loved category',lifeCards:['ON THE MAT','FLOW STATE','STUDIO FITS','MINDFUL MOVEMENT'],loyaltyTitle:'Join Aura Circle — it is free',loyaltySub:'Earn points on every purchase and get 20% off your first order.',encoreTitle:'Free shipping on your first order',catPageTitle:'Yoga & Swim',catPageSub:'Performance made for every practice.',catResultCount:'186 Results',pdpTitle:'High Rise Performance Tight 7/8',pdpDesc:'Your go-to studio tight, now in new colourways. Built for flow, stretch, and everything in between.',pdpRecsTitle:'COMPLETE YOUR PRACTICE',pdpAtcBtn:'Add to Bag',pdpEyebrow:'Yoga & Studio',pdpBreadcrumbCat:'Yoga & Studio'}
 };
 
 var MODALS={
   maya:{headerBg:'linear-gradient(135deg,var(--teal),#0d3d45)',visitorState:'Authenticated - Circle All-Access',tagline:'Studio Instructor - San Francisco, CA - Aura Circle Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'var(--teal)',offerHeader:'Circle All-Access Exclusive',offerHeadline:'Your extra 15% is waiting.',offerDesc:'As one of our most loyal members, you get early access to new arrivals plus an exclusive discount applied automatically at checkout.',offerCode:'MAYA15'},
-  jennifer:{headerBg:'linear-gradient(135deg,#2a3a5a,#151f35)',visitorState:'Unauthenticated - Known Visitor',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#2a3a5a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20'},
+  jennifer:{headerBg:'linear-gradient(135deg,#b5717a,#9a5a68)',visitorState:'Unauthenticated - Known Visitor',tagline:'Weekend Warrior Mom - Naperville, IL - Lapsed Member',matchBadge:'Deterministic Match - Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#b5717a',offerHeader:'We Have Missed You',offerHeadline:'20% off to welcome you back.',offerDesc:'It has been a while and we have new styles we think you will love. From versatile jackets to everything in between.',offerCode:'WELCOME20'},
   danielle:{headerBg:'linear-gradient(135deg,#3a1a6a,#1e0a3d)',visitorState:'Probabilistic Match - Cross-Sell Signal',tagline:'Yoga Buyer — Merkury 3P swim propensity detected',matchBadge:'Probabilistic Match - Confidence 3',matchType:'Probabilistic',matchClass:'prob',confidence:'3 - Medium',offerBg:'#4a1a8a',offerHeader:'Identified via Merkury Tag',offerHeadline:'Dive into our swim collection.',offerDesc:'Merkury signals show this visitor has strong swim purchase propensity — a category she has never bought from Aura.',offerCode:'SWIM20'}
 };
 
@@ -1495,6 +1495,8 @@ function setHTML(id,val){var el=document.getElementById(id);if(el)el.innerHTML=v
 function applyContent(key){
   var v=CONTENT[key]||CONTENT['def'];
   setHTML('promo-bar-text',v.promoBar);
+  var pb=document.querySelector('.promo-bar');
+  if(pb)pb.style.background=key==='jennifer'?'#b5717a':'var(--teal)';
   var ey=document.getElementById('hero-eyebrow');
   if(ey){
     ey.style.display=v.heroEyebrow?'block':'none';
@@ -1513,7 +1515,7 @@ function applyContent(key){
     var hb=document.getElementById('hero-h1-bold');if(hb)hb.style.color=dark?'var(--black)':'#fff';
     var hs=document.getElementById('hero-sub');if(hs)hs.style.color=dark?'var(--text2)':'rgba(255,255,255,.8)';
     var hcta=document.getElementById('hero-cta1');
-    if(hcta){hcta.className=dark?'btn-pill btn-black':'btn-pill';hcta.style.background=dark?'':'#fff';hcta.style.color=dark?'':'var(--black)';hcta.style.borderColor=dark?'':'#fff';}
+    if(hcta){if(key==='jennifer'){hcta.className='btn-pill';hcta.style.background='#b5717a';hcta.style.color='#fff';hcta.style.borderColor='#b5717a';}else{hcta.className=dark?'btn-pill btn-black':'btn-pill';hcta.style.background=dark?'':'#fff';hcta.style.color=dark?'':'var(--black)';hcta.style.borderColor=dark?'':'#fff';}}
   }
   set('home-cat-title',v.homeCatTitle);
   for(var i=0;i<4;i++){set('cat-label-'+(i+1),v.catLabels[i]);set('cat-sub-'+(i+1),v.catSubs[i]);}
@@ -1553,7 +1555,7 @@ function applyContent(key){
     if(tier1Desc)tier1Desc.textContent='Included in your Premier membership.';
     if(circleH1)circleH1.textContent='Welcome back, Jennifer.';
     if(circleSub)circleSub.textContent='You\'re a Circle Premier member. Your points are waiting — and you\'re closer to your next reward than you think.';
-    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='#2a3a5a';circleCta1.style.borderColor='#2a3a5a';}
+    if(circleCta1){circleCta1.textContent='View My Rewards';circleCta1.style.background='#b5717a';circleCta1.style.borderColor='#b5717a';}
   } else {
     if(memberBar)memberBar.style.display='none';
     if(merkuryBar)merkuryBar.style.display='none';
@@ -1814,7 +1816,7 @@ function updateChatContext(){
 function updateStickyPill(key){
   var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
   btn.classList.remove('hidden');
-  var configs={jennifer:{text:'Save 20% off today',bg:'#2a3a5a'},def:{text:'Get 15% Off',bg:'var(--black)'}};
+  var configs={jennifer:{text:'Save 20% off today',bg:'#b5717a'},def:{text:'Get 15% Off',bg:'var(--black)'}};
   var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
   // Personalise footer Circle column
   var fc1=document.getElementById('fc-link-1'),fc2=document.getElementById('fc-link-2'),fc3=document.getElementById('fc-link-3'),fc4=document.getElementById('fc-link-4');
@@ -1958,7 +1960,7 @@ function applyPersona(key){
     setTimeout(function(){
       if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}
     },150);
-    setTimeout(function(){openModal();},500);
+    // modal opens manually via integration tab only
   }else{
     dismissModal();
     if(timelineOpen){timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');}
