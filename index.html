@@ -115,7 +115,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .jem-header-sub{font-size:13px;color:rgba(255,255,255,.65);}
 .jem-body{padding:24px 32px;}
 .jem-product{display:flex;gap:16px;padding:16px;background:#f7f4f0;border-radius:8px;margin-bottom:20px;}
-.jem-product-img{width:80px;height:80px;border-radius:6px;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.3.webp') center/cover no-repeat;flex-shrink:0;}
+.jem-product-img{width:80px;height:80px;border-radius:6px;background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.grey.model.png') center top/cover no-repeat;flex-shrink:0;}
 .jem-product-name{font-size:14px;font-weight:700;color:#0d0d0d;margin-bottom:3px;}
 .jem-product-detail{font-size:12px;color:#888;margin-bottom:6px;}
 .jem-product-price{font-size:16px;font-weight:700;color:#0d0d0d;}
@@ -1069,7 +1069,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
   <div class="hero"><div class="hero-split">
-    <div class="hero-photo-left"></div>
+    <div class="hero-photo-left" id="hero-photo-left"></div>
     <div class="hero-center" id="hero-center">
       <p class="hero-eyebrow" id="hero-eyebrow"></p>
       <span class="hero-h1-light" id="hero-h1-light">MOVE IN WHAT</span>
@@ -1077,7 +1077,7 @@ footer{background:#fff;padding:40px 0 0;}
       <p class="hero-sub" id="hero-sub">Discover our latest collection — designed for every move you make.</p>
       <a class="btn-pill btn-black" id="hero-cta1" onclick="showPage('category')">Shop Now</a>
     </div>
-    <div class="hero-photo-right"></div>
+    <div class="hero-photo-right" id="hero-photo-right"></div>
   </div></div>
 
 
@@ -1125,8 +1125,8 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="product-grid">
       <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sunrise.yoga.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Flow State Legging</div><div class="pt-price">$89</div><div class="pt-member-price">Circle Price $80</div></div>
       <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/matching.sets.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Studio Matching Set</div><div class="pt-price">$148</div><div class="pt-member-price">Circle Price $133</div></div>
-      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/sports.bra.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">High Impact Sports Bra</div><div class="pt-price">$68</div><div class="pt-member-price">Circle Price $61</div></div>
-      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/meditation.mountain.webp') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">High Rise Flare Pant</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.purple.zip.webp') center top/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Studio Zip Jacket</div><div class="pt-price">$68</div><div class="pt-member-price">Circle Price $61</div></div>
+      <div class="product-tile" onclick="showPage('pdp')"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.silver.flat.png') center top/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Performance Rain Jacket</div><div class="pt-price">$98</div><div class="pt-member-price">Circle Price $88</div></div>
     </div>
   </div></div>
   <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
@@ -1318,10 +1318,10 @@ footer{background:#fff;padding:40px 0 0;}
   <div class="cat-page-grid-wrap"><div class="w">
     <div class="cat-page-result-count" id="jackets-result-count">58 Results</div>
     <div class="product-grid">
-      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-1"><div class="pt-photo" style="background:linear-gradient(135deg,#c8d0cc,#a0aca6);"><div class="pt-badge">New</div></div><div class="pt-name">Performance Rain Jacket</div><div class="pt-price">$189</div><div class="pt-member-price">Circle Price $170</div></div>
-      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-2"><div class="pt-photo" style="background:linear-gradient(135deg,#b8c4c0,#90a0a0);"></div><div class="pt-name">Softshell Performance Jacket</div><div class="pt-price">$148</div><div class="pt-member-price">Circle Price $133</div></div>
-      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-3"><div class="pt-photo" style="background:linear-gradient(135deg,#c0c8c4,#98a8a4);"><div class="pt-badge">Bestseller</div></div><div class="pt-name">Trail Jacket</div><div class="pt-price">$178</div><div class="pt-member-price">Circle Price $160</div></div>
-      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-4"><div class="pt-photo" style="background:linear-gradient(135deg,#b0bab6,#889898);"></div><div class="pt-name">Zip Studio Jacket</div><div class="pt-price">$138</div><div class="pt-member-price">Circle Price $124</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-1"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.rain.hood.png') center/cover no-repeat;"><div class="pt-badge">New</div></div><div class="pt-name">Performance Rain Jacket</div><div class="pt-price">$189</div><div class="pt-member-price">Circle Price $170</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-2"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.softshell.red.png') center top/cover no-repeat;"></div><div class="pt-name">Softshell Performance Jacket</div><div class="pt-price">$148</div><div class="pt-member-price">Circle Price $133</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-3"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.trail.white.png') center/cover no-repeat;"><div class="pt-badge">Bestseller</div></div><div class="pt-name">Trail Jacket</div><div class="pt-price">$178</div><div class="pt-member-price">Circle Price $160</div></div>
+      <div class="product-tile" onclick="showPage('pdp')" data-slot="jacket-4"><div class="pt-photo" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.studio.sage.png') center/cover no-repeat;"></div><div class="pt-name">Zip Studio Jacket</div><div class="pt-price">$138</div><div class="pt-member-price">Circle Price $124</div></div>
     </div>
   </div></div>
   <footer><div class="footer-cols"><div class="fc"><h4>Customer Support</h4><a>Shipping</a><a>Returns</a></div><div class="fc"><h4>Aura Circle</h4><a>Points and Rewards</a></div><div class="fc"><h4>About Us</h4><a>Our Story</a></div><div class="fc"><h4>Find Us</h4><a>Contact Us</a></div></div><div class="footer-bottom"><span>&copy; 2026 Aura Active, Inc. All Rights Reserved. &nbsp;|&nbsp; Created by Victoria Morrissey &amp; Jessica Taylor for Merkle Data &amp; Identity Solutions</span><div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a></div></div></footer>
@@ -1333,10 +1333,10 @@ footer{background:#fff;padding:40px 0 0;}
     <div class="pdp-breadcrumb" id="pdp-breadcrumb" onclick="showPage(window._pdpFrom||'category')">Back to <span id="pdp-breadcrumb-cat">Bottoms</span></div>
     <div class="pdp-grid">
       <div class="pdp-photos">
-        <div class="pdp-photo-main grad-1"></div>
-        <div class="pdp-photo-thumb grad-2"></div>
-        <div class="pdp-photo-thumb grad-3"></div>
-        <div class="pdp-photo-thumb grad-4"></div>
+        <div class="pdp-photo-main" id="pdp-photo-main" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t1" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t2" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;"></div>
+        <div class="pdp-photo-thumb" id="pdp-photo-t3" style="background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp') center/cover no-repeat;"></div>
       </div>
       <div>
         <div class="pdp-eyebrow" id="pdp-eyebrow">Bottoms</div>
@@ -1459,7 +1459,7 @@ var CONF_EXPLAIN={
 var CART_CONFIG={
   def:{itemName:'High Rise Flare Performance Pant',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$98.00',itemMember:'Circle Member Price $88.00',itemGrad:'grad-1',pointsText:'<strong>Join Aura Circle free</strong> and earn points on this purchase.',recsTitle:"Styles We Think You'll Love",subtotal:'$98.00',recs:[{name:'Performance Tight 7/8',price:'$98',g:'grad-2'},{name:'Barrel Leg Pant',price:'$118',g:'grad-3'},{name:'Studio Jogger',price:'$79',g:'grad-5'}]},
   maya:{itemName:'High Rise Performance Tight 7/8',itemDetail:'Size: S - Color: Midnight Black - Qty: 1',itemPrice:'$109.00',itemMember:'Circle All-Access Price: $98.10',itemGrad:'grad-1',pointsText:'<strong>Circle All-Access:</strong> You will earn <strong>545 points</strong> on this order.',recsTitle:'Because You Loved These',subtotal:'$98.10',recs:[{name:'Longline Sports Bra',price:'$59',g:'grad-6'},{name:'Everyday Legging',price:'$74',g:'grad-2'},{name:'Studio Wrap Top',price:'$89',g:'grad-3'}]},
-  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'With your discount: $133.20',itemGrad:'grad-7',itemBg:"url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.3.webp') center/cover no-repeat",pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
+  jennifer:{itemName:'Performance Softshell Jacket',itemDetail:'Size: M - Color: Black - Qty: 1',itemPrice:'$148.00',itemMember:'With your discount: $133.20',itemGrad:'grad-7',itemBg:"url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.grey.model.png') center top/cover no-repeat",pointsText:'<strong>Welcome back, Jennifer.</strong> This purchase earns <strong>740 points</strong> toward your next reward.',recsTitle:'Complete the Look',subtotal:'$133.20',recs:[{name:'Studio Wrap Top',price:'$89',g:'grad-3'},{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Long Sleeve Top',price:'$59',g:'grad-4'}]},
   danielle:{itemName:'Structured Barrel Leg Pant',itemDetail:'Size: S - Color: Deep Plum - Qty: 1',itemPrice:'$118.00',itemMember:'Free shipping on your first order',itemGrad:'grad-3',pointsText:'<strong>Join Aura Circle free</strong> - earn points starting with this order.',subtotal:'$118.00',recs:[{name:'Wide Leg Studio Pant',price:'$108',g:'grad-6'},{name:'Everyday Studio Tank',price:'$49',g:'grad-4'},{name:'Performance Rain Jacket',price:'$189',g:'grad-8'}]}
 };
 
@@ -1572,6 +1572,31 @@ function applyContent(key){
   set('pdp-eyebrow',v.pdpEyebrow);
   var pbc=document.getElementById('pdp-breadcrumb-cat');if(pbc)pbc.textContent=v.pdpBreadcrumbCat;
   renderProductGrid(key);applyLoyalty(key);
+  // PDP photos swap per persona
+  var pdpMain=document.getElementById('pdp-photo-main');
+  var pdpT1=document.getElementById('pdp-photo-t1');
+  var pdpT2=document.getElementById('pdp-photo-t2');
+  var pdpT3=document.getElementById('pdp-photo-t3');
+  if(key==='jennifer'){
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.grey.model.png')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.softshell.red.png')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.softshell.grey.png')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.studio.sage.png')";
+  }else{
+    if(pdpMain)pdpMain.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/legging.shot.webp')";
+    if(pdpT1)pdpT1.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yoga.mat.webp')";
+    if(pdpT2)pdpT2.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";
+    if(pdpT3)pdpT3.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.fit.webp')";
+  }
+  var hpl=document.getElementById('hero-photo-left');
+  var hpr=document.getElementById('hero-photo-right');
+  if(key==='jennifer'){
+    if(hpl)hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/leggings.group.webp')";
+    if(hpr)hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/jacket.vest.park.png')";
+  }else{
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp')";}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";}
+  }
   // Circle page personalisation
   // Jackets page personalisation bar
   // jackets personalisation bar removed
