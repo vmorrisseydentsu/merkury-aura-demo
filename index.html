@@ -2031,11 +2031,7 @@ function applyPersona(key){
   setTimeout(function(){panelOpen=false;var pan=document.getElementById('ps-panel'),tog=document.getElementById('ps-toggle');if(pan)pan.classList.remove('open');if(tog)tog.classList.remove('open');},300);
   if(key!=='def'){
     populateModal(key);
-    // Identity panel opens first, persona modal follows
-    setTimeout(function(){
-      if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}
-    },150);
-    // modal opens manually via integration tab only
+    // identity panel and modal open manually via integration tab only
   }else{
     dismissModal();
     if(timelineOpen){timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');}
