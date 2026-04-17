@@ -33,7 +33,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .demo-banner{background:#5a6e3a;text-align:center;padding:9px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;}
 
 /* Integration tab below Demo Persona */
-#ps-integration-tab{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--black);border:1.5px solid rgba(255,255,255,.12);border-radius:8px;width:240px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:8600;}
+#ps-integration-tab{display:none;position:absolute;top:0;right:calc(100% + 8px);background:var(--black);border:1.5px solid rgba(255,255,255,.12);border-radius:8px;width:220px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:8700;}
 #ps-integration-tab.open{display:block;}
 .ps-int-tab-header{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.08);}
 .ps-int-tab-btn{width:100%;padding:10px 14px;text-align:left;font-size:12px;font-weight:600;font-family:var(--font);cursor:pointer;border:none;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;transition:background .15s;color:inherit;}
@@ -161,7 +161,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 /* HERO */
 .hero{overflow:hidden;}
 .hero-split{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:580px;}
-.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;}
+.hero-photo-left{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp') center/cover no-repeat;background-size:cover;}
 .hero-photo-right{background:url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp') center/cover no-repeat;}
 .hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-align:center;background:#fff;}
 .hero-eyebrow{font-family:var(--font-serif);font-size:15px;font-weight:400;font-style:italic;color:var(--text3);margin-bottom:12px;display:none;letter-spacing:.5px;}
@@ -637,7 +637,7 @@ footer{background:#fff;padding:40px 0 0;}
 #ps-toggle .ps-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
 #ps-toggle .ps-chevron{font-size:9px;opacity:.7;transition:transform .2s;}
 #ps-toggle.open .ps-chevron{transform:rotate(180deg);}
-#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;}
+#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;z-index:8500;}
 #ps-panel.open{display:block;}
 .ps-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
 .ps-header-left h3{font-family:var(--font-serif);font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;}
@@ -1591,11 +1591,11 @@ function applyContent(key){
   var hpl=document.getElementById('hero-photo-left');
   var hpr=document.getElementById('hero-photo-right');
   if(key==='jennifer'){
-    if(hpl)hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/leggings.group.webp')";
-    if(hpr)hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.vest.park.png')";
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/leggings.group.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center top';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-aura-demo/main/jacket.vest.park.png')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center top';}
   }else{
-    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp')";}
-    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";}
+    if(hpl){hpl.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/yogi.sunrise.webp')";hpl.style.backgroundSize='cover';hpl.style.backgroundPosition='center';}
+    if(hpr){hpr.style.backgroundImage="url('https://raw.githubusercontent.com/vmorrisseydentsu/merkury-demo-aura/main/workout.1.webp')";hpr.style.backgroundSize='cover';hpr.style.backgroundPosition='center';}
   }
   // Circle page personalisation
   // Jackets page personalisation bar
