@@ -1057,7 +1057,7 @@ footer{background:#fff;padding:40px 0 0;}
       <!-- Integration tab — visible when Jennifer active -->
       <div id="ps-integration-tab">
         <div class="ps-int-tab-header">&#9889; Jennifer — Activations</div>
-        <button class="ps-int-tab-btn" style="background:rgba(194,122,90,.15);color:#e8a888;" onclick="document.getElementById('ps-integration-tab').classList.remove('open');if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}"><span class="ps-int-icon">🪪</span>Merkury Identity Resolved</button>
+        <button class="ps-int-tab-btn" style="background:rgba(194,122,90,.15);color:#e8a888;" onclick="if(!timelineOpen){timelineOpen=true;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.add('open');}"><span class="ps-int-icon">🪪</span>Merkury Identity Resolved</button>
         <button class="ps-int-tab-btn sms" onclick="openCampaignModal()"><span class="ps-int-icon">📱</span>SMS Re-engagement Campaign</button>
         <button class="ps-int-tab-btn email" onclick="openJenniferEmailModal()"><span class="ps-int-icon">📧</span>Win-back Email Preview</button>
         <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — Save 20% Off</button>
